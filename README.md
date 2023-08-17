@@ -47,15 +47,22 @@ We created a guide to get you started with:
     └── Strategy.t.sol
 ```
 
-## Notable Mentions
+## About this Starter Template
 
-- [femplate](https://github.com/refcell/femplate)
-- [foundry](https://github.com/foundry-rs/foundry)
-- [solmate](https://github.com/Rari-Capital/solmate)
-- [forge-std](https://github.com/brockelmore/forge-std)
-- [forge-template](https://github.com/foundry-rs/forge-template)
-- [foundry-toolchain](https://github.com/foundry-rs/foundry-toolchain)
+This template is a fork of [femplate](https://github.com/refcell/femplate) that
+has been modified to suite building allocation strategies for Allo Protocol. It
+uses [foundry](https://github.com/foundry-rs/foundry) and comes with
+[`allo-v2`](https://github.com/allo-protocol/allo-v2),
+[solmate](https://github.com/transmissions11/solmate), and
+[openzeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts)
+pre-installed.
 
+The strategy you write should go in [`src/Strategy.sol`](./src/Strategy.sol).
+We've set up basic testing infrastructure for you in [`test/`](./test).
+
+If you're looking for examples of how to build and/or test a strategy, check out
+the [strategy
+library](https://github.com/allo-protocol/allo-v2/tree/main/contracts/strategies)
 
 ## Disclaimer
 
