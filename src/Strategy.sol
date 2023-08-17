@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.17;
+pragma solidity ^0.8.19;
 
 // External Libraries
-import {ReentrancyGuard} from "@openzeppelin/contracts/security/ReentrancyGuard.sol";
+import {ReentrancyGuard} from "openzeppelin-contracts/contracts/security/ReentrancyGuard.sol";
 
 // Intefaces
 import {IAllo} from "allo/contracts/core/IAllo.sol";
@@ -14,8 +14,7 @@ import {BaseStrategy} from "allo/contracts/strategies/BaseStrategy.sol";
 // Internal Libraries
 import {Metadata} from "allo/contracts/core/libraries/Metadata.sol";
 
-
-/// @title Greeter
+/// @title Strategy
 contract Strategy is BaseStrategy {
 
   /// ===============================
@@ -57,6 +56,28 @@ contract Strategy is BaseStrategy {
   /// @param _sender The sender of the distribution
   function _distribute(address[] memory _recipientIds, bytes memory, address
                         _sender) internal virtual override {
+
+  }
+
+  /// ====================================
+  /// ============= Views ================
+  /// ====================================
+
+  function getRecipientStatus(address _recipientId) external view returns
+  (RecipientStatus) {
+
+  }
+
+  /// ====================================
+  /// =========== Internal ===============
+  /// ====================================
+
+  function _getPayout(address _recipientId, bytes memory _data) internal view
+  override returns (PayoutSummary memory){
+  }
+
+  function _isValidAllocator(address _allocator) internal view override virtual
+  returns (bool) {
 
   }
 }

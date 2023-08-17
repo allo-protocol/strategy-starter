@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.17;
+pragma solidity ^0.8.19;
 
 import "forge-std/Test.sol";
 
@@ -15,7 +15,7 @@ import {RegistrySetupFull} from "allo/test/foundry/shared/RegistrySetup.sol";
 
 import {EventSetup} from "allo/test/foundry/shared/EventSetup.sol";
 
-contract StrategyTest is Test, EventSetup, AlloSetup, RegistrySetup {
+contract StrategyTest is Test, EventSetup, AlloSetup, RegistrySetupFull {
     Strategy strategy;
 
     function setUp() public {
