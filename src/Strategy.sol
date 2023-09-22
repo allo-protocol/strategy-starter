@@ -16,6 +16,7 @@ import {Metadata} from "allo/contracts/core/libraries/Metadata.sol";
 
 /// @title Strategy
 contract Strategy is BaseStrategy {
+  
     /// ===============================
     /// ======== Constructor ==========
     /// ===============================
